@@ -41,20 +41,4 @@ def calcular(X,w):
 	return salida
 
 def normalizar(matriz):
-	promedio = np.mean(matriz, axis=0)
-	desviacion = np.std(matriz, axis=0)
-	vector = False
-	# en caso de que la matriz sea un vector (una dimensión)
-	if(matriz.ndim < 2 ):
-		vector = True
-		matriz = matriz.reshape(matriz.shape[0],1)
-		promedio = np.asarray(promedio).reshape(1,-1)[0,:]
-		desviacion = promedio = np.asarray(desviacion).reshape(1,-1)[0,:]
-	n,m = matriz.shape
-	for i in range (m):
-		matriz[:,i] = (matriz[:, i] - promedio[i])/desviacion[i]
-
-	if vector:
-		matriz = matriz.reshape(matriz.shape[0],)
-		
-	return matriz
+	return matriz/np.max(matriz)

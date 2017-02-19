@@ -57,14 +57,14 @@ def obtener_convergencia(X,y,w,tasa_aprendizaje,iteraciones,color):
 	costos = gradiente[0]
 	plt.plot(np.arange(0,iteraciones), costos, color)	
 
-def ejercicio_2():
+def ejercicio_2(opcion):
 	datos = preprocesamiento()
 
 	X = datos[0]
 	y = datos[1]
 	w = datos[2]
 	
-	iteraciones = 1000
+	iteraciones = 100
 	tasa_aprendizaje = 0.1
 	imprimir = False
 
@@ -72,7 +72,9 @@ def ejercicio_2():
 	costos = gradiente[0]
 	w = gradiente[1]
 
-	ejercicio_2_2(X,y,w)
+	if opcion == "a":
+		ejercicio_2_1(iteraciones,costos)
+	else:
+		ejercicio_2_2(X,y,w)
 
 	plt.show()
-	
