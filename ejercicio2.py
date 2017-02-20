@@ -72,7 +72,7 @@ def ejercicio_2(opcion):
 	costos = gradiente[0]
 	w = gradiente[1]
 
-	if opcion == "a":
+	if opcion == "1":
 		ejercicio_2_1(iteraciones,costos)
 	else:
 		ejercicio_2_2(X,y,w)

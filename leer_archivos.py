@@ -6,6 +6,12 @@ def obtener_pesos():
 def obtener_mortalidad():
 	return leer_archivo("archivos/x08.txt")
 
+def obtener_experimento():
+	return leer_archivo("archivos/training.txt")
+
+def obtener_validacion():
+	return leer_archivo("archivos/test.txt")
+
 def leer_archivo(nombre):
 	archivo = open(nombre, "r")	
 	X = np.array([])
