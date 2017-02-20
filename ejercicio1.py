@@ -24,14 +24,14 @@ def preprocesamiento():
 
 def ejercicio_1_1(iteraciones,costos):
 	convergencia = plt.subplot(211)
-	convergencia.set_title("Ejercicio 2.a:")
+	convergencia.set_title("Ejercicio 1.a:")
 	convergencia.set_xlabel('Iteracion')
 	convergencia.set_ylabel('Costo')
 	convergencia.plot(np.arange(0,iteraciones), costos, 'k')
 
 def ejercicio_1_2(x,y,w):
 	datos = plt.subplot(212)
-	datos.set_title("Ejercicio 2.b:")	
+	datos.set_title("Ejercicio 1.b:")	
 	datos.set_xlabel('Datos')
 	datos.set_ylabel('Costo')
 	y_prediccion = calcular(x,w)
@@ -44,7 +44,7 @@ def ejercicio_1():
 	y = datos[1]
 	w = datos[2]
 	
-	iteraciones = 1000
+	iteraciones = 100
 	tasa_aprendizaje = 0.1
 	imprimir = False
 
